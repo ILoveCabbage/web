@@ -1,0 +1,22 @@
+Using library:
+urllib; request; beautifulsoup; os; html.parser; time; pprint; heapq; mimetypes
+
+Main function: 
+	1.Priority_crawler
+	2.BFS_crawler
+	3.Class Queue() -- design class for storing urls to be crawled(BFS).
+	4.Function relavant(link,keyword) -- calculate priority score
+	
+
+How I implement this crawler: 
+	1. Priority Score: Using counting the number of keyword occurrence of the page and divide it by the total string number of the page. Since keywords, like "emperor penguin", are more than one word, if find "emperor penguin" in page, count it as 4. If find single words, like "emperor" or "penguin", count it as 1. Harvest rate: average score of all the crawled pages
+	2. Data structure:Using dictionary for crawled_list. Using queue for urls to be crawled in BFS, using heap for urls to be crawled in Priority
+	3. Download pages: urlretrieve(url)
+	4. Parsing: Using beautiful soup 
+	5. Abiguity of URL: If find "index" in URL string, discard this URL. Using urljoin() combine base url and url to get a completed URL.
+	6. Different Type of files:
+	7. Checking for early visits: Using dictionary structure to store crawled URLs, if new url is in the crawled list, discard it.
+	8. Get Google search result: Using Google custom API. search engine id : 002546779376930127031:tu5ldsfgyna. api : AIzaSyA0uahgObFqg7aYsorYdAfcmQkOU8hAG1s
+ 
+
+
